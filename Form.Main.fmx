@@ -1,0 +1,434 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'TEncodingSqids Playground'
+  ClientHeight = 604
+  ClientWidth = 504
+  Position = DesktopCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object lblTitle: TSkLabel
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 10.000000000000000000
+    Size.Width = 484.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Family, FontColor]
+    TextSettings.Font.Size = 24.000000000000000000
+    TextSettings.Font.Weight = Medium
+    Words = <
+      item
+        Text = 'Sqids Playground '#55357#56345
+      end>
+  end
+  object lblAlphabet: TSkLabel
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 62.000000000000000000
+    Size.Width = 484.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    Words = <
+      item
+        Name = 'Item 0'
+        Text = 'Alphabet - '
+      end
+      item
+        Font.Weight = Bold
+        Name = 'chars'
+        StyledSettings = [Family, Size, FontColor]
+        Text = '0'
+      end
+      item
+        Name = 'Item 1'
+        Text = ' chars'
+      end>
+  end
+  object edtAlphabet: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
+    TabOrder = 2
+    TextSettings.Font.Family = 'Consolas'
+    Position.X = 10.000000000000000000
+    Position.Y = 86.000000000000000000
+    Padding.Left = 10.000000000000000000
+    Margins.Left = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Size.Width = 484.000000000000000000
+    Size.Height = 35.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Size, Style, FontColor]
+    OnChangeTracking = edtAlphabetChangeTracking
+  end
+  object Layout1: TLayout
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 126.000000000000000000
+    Size.Width = 484.000000000000000000
+    Size.Height = 27.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object btnDefault: TSpeedButton
+      Align = Left
+      Size.Width = 80.000000000000000000
+      Size.Height = 27.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'segmentedbuttonleft'
+      Text = 'Default'
+      TextSettings.Trimming = None
+      OnClick = btnAssignAlphabetClick
+    end
+    object btnLowercase: TSpeedButton
+      Tag = 3
+      Align = Left
+      Position.X = 240.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 27.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'segmentedbuttonmiddle'
+      Text = 'Lowercase'
+      TextSettings.Trimming = None
+      OnClick = btnAssignAlphabetClick
+    end
+    object btnLetters: TSpeedButton
+      Tag = 2
+      Align = Left
+      Position.X = 160.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 27.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'segmentedbuttonmiddle'
+      Text = 'Letters'
+      TextSettings.Trimming = None
+      OnClick = btnAssignAlphabetClick
+    end
+    object btnNumbers: TSpeedButton
+      Tag = 1
+      Align = Left
+      Position.X = 80.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 27.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'segmentedbuttonmiddle'
+      Text = 'Numbers'
+      TextSettings.Trimming = None
+      OnClick = btnAssignAlphabetClick
+    end
+    object btnUppercase: TSpeedButton
+      Tag = 4
+      Align = Left
+      Position.X = 320.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 27.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'segmentedbuttonright'
+      Text = 'Uppercase'
+      TextSettings.Trimming = None
+      OnClick = btnAssignAlphabetClick
+    end
+    object btnShuffle: TSpeedButton
+      Align = Left
+      Position.X = 400.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 27.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Shuffle'
+      TextSettings.Trimming = None
+      OnClick = btnShuffleClick
+    end
+  end
+  object lblLength: TSkLabel
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 173.000000000000000000
+    Size.Width = 484.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    Words = <
+      item
+        Name = 'Item 0'
+        Text = 'Minimum Length = '
+      end
+      item
+        Font.Weight = Bold
+        FontColor = claBlack
+        Name = 'length'
+        StyledSettings = [Family, Size]
+        Text = '0'
+      end>
+  end
+  object TrackBarLength: TTrackBar
+    Align = Top
+    CanParentFocus = True
+    Frequency = 1.000000000000000000
+    Orientation = Horizontal
+    Margins.Left = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 197.000000000000000000
+    Size.Width = 484.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    OnChange = ActionListChangeLength
+  end
+  object TabControl: TTabControl
+    Align = Client
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Size.Width = 484.000000000000000000
+    Size.Height = 368.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 6
+    TabPosition = PlatformDefault
+    OnChange = TabControlChange
+    Sizes = (
+      484s
+      342s
+      484s
+      342s
+      484s
+      342s)
+    object tabResults: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = True
+      Size.Width = 58.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Results'
+      ExplicitSize.cx = 58.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object Grid1: TGrid
+        Align = Client
+        CanFocus = True
+        ClipChildren = True
+        Locked = True
+        Size.Width = 484.000000000000000000
+        Size.Height = 342.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Consolas'
+        StyledSettings = [Size, Style, FontColor]
+        TabOrder = 9
+        Viewport.Width = 480.000000000000000000
+        Viewport.Height = 317.000000000000000000
+      end
+    end
+    object tabEncode: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = False
+      Size.Width = 59.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Encode'
+      ExplicitSize.cx = 59.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object lblEncode: TSkLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 464.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.HorzAlign = Center
+        Words = <
+          item
+            Text = 'Encoding these numbers:'
+          end>
+      end
+      object edtEncode: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        Text = '1,2,3'
+        TextSettings.Font.Family = 'Consolas'
+        TextSettings.HorzAlign = Center
+        Position.X = 10.000000000000000000
+        Position.Y = 34.000000000000000000
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Size.Width = 464.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        OnChangeTracking = EditsChangeTracking
+      end
+      object edtEncodeResult: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 2
+        ReadOnly = True
+        TextSettings.Font.Family = 'Consolas'
+        TextSettings.HorzAlign = Center
+        Position.X = 10.000000000000000000
+        Position.Y = 103.000000000000000000
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Size.Width = 464.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+      end
+      object lblEncodeResult: TSkLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 79.000000000000000000
+        Size.Width = 464.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.HorzAlign = Center
+        Words = <
+          item
+            Text = 'Will produce:'
+          end>
+      end
+    end
+    object tabDecode: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = False
+      Size.Width = 61.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Decode'
+      ExplicitSize.cx = 61.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object lblDecode: TSkLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 464.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.HorzAlign = Center
+        Words = <
+          item
+            Text = 'Decoding this ID:'
+          end>
+      end
+      object edtDecode: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 1
+        TextSettings.Font.Family = 'Consolas'
+        TextSettings.HorzAlign = Center
+        Position.X = 10.000000000000000000
+        Position.Y = 34.000000000000000000
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Size.Width = 464.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+        OnChangeTracking = EditsChangeTracking
+      end
+      object lblDecodeResult: TSkLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 79.000000000000000000
+        Size.Width = 464.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.HorzAlign = Center
+        Words = <
+          item
+            Text = 'Will produce:'
+          end>
+      end
+      object edtDecodeResult: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 2
+        ReadOnly = True
+        TextSettings.Font.Family = 'Consolas'
+        TextSettings.HorzAlign = Center
+        Position.X = 10.000000000000000000
+        Position.Y = 103.000000000000000000
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Size.Width = 464.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
+      end
+    end
+  end
+  object ActionList: TActionList
+    Left = 32
+    Top = 472
+    object ActionChangeLength: TAction
+      Text = 'ActionChangeLength'
+      OnExecute = ActionListChangeLength
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DbModule.tblSqids
+    ScopeMappings = <>
+    Left = 200
+    Top = 472
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 108
+    Top = 472
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = Grid1
+      Columns = <>
+    end
+  end
+end
