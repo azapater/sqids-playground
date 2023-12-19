@@ -82,3 +82,6 @@ OSX64/
 Win32/
 Win64/
 __astcache/
+
+# Excluded res files for this project in particular
+*.res

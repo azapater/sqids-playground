@@ -67,7 +67,7 @@ object MainForm: TMainForm
     Margins.Left = 10.000000000000000000
     Margins.Right = 10.000000000000000000
     Size.Width = 484.000000000000000000
-    Size.Height = 35.000000000000000000
+    Size.Height = 30.000000000000000000
     Size.PlatformDefault = False
     StyledSettings = [Size, Style, FontColor]
     OnChangeTracking = edtAlphabetChangeTracking
@@ -79,7 +79,7 @@ object MainForm: TMainForm
     Margins.Right = 10.000000000000000000
     Margins.Bottom = 10.000000000000000000
     Position.X = 10.000000000000000000
-    Position.Y = 126.000000000000000000
+    Position.Y = 121.000000000000000000
     Size.Width = 484.000000000000000000
     Size.Height = 27.000000000000000000
     Size.PlatformDefault = False
@@ -160,7 +160,7 @@ object MainForm: TMainForm
     Margins.Right = 10.000000000000000000
     Margins.Bottom = 5.000000000000000000
     Position.X = 10.000000000000000000
-    Position.Y = 173.000000000000000000
+    Position.Y = 168.000000000000000000
     Size.Width = 484.000000000000000000
     Size.Height = 19.000000000000000000
     Size.PlatformDefault = False
@@ -185,7 +185,7 @@ object MainForm: TMainForm
     Margins.Left = 10.000000000000000000
     Margins.Right = 10.000000000000000000
     Position.X = 10.000000000000000000
-    Position.Y = 197.000000000000000000
+    Position.Y = 192.000000000000000000
     Size.Width = 484.000000000000000000
     Size.Height = 19.000000000000000000
     Size.PlatformDefault = False
@@ -199,7 +199,7 @@ object MainForm: TMainForm
     Margins.Right = 10.000000000000000000
     Margins.Bottom = 10.000000000000000000
     Size.Width = 484.000000000000000000
-    Size.Height = 368.000000000000000000
+    Size.Height = 373.000000000000000000
     Size.PlatformDefault = False
     TabIndex = 0
     TabOrder = 6
@@ -207,11 +207,11 @@ object MainForm: TMainForm
     OnChange = TabControlChange
     Sizes = (
       484s
-      342s
+      347s
       484s
-      342s
+      347s
       484s
-      342s)
+      347s)
     object tabResults: TTabItem
       CustomIcon = <
         item
@@ -232,13 +232,13 @@ object MainForm: TMainForm
         ClipChildren = True
         Locked = True
         Size.Width = 484.000000000000000000
-        Size.Height = 342.000000000000000000
+        Size.Height = 347.000000000000000000
         Size.PlatformDefault = False
         TextSettings.Font.Family = 'Consolas'
         StyledSettings = [Size, Style, FontColor]
         TabOrder = 9
         Viewport.Width = 480.000000000000000000
-        Viewport.Height = 317.000000000000000000
+        Viewport.Height = 322.000000000000000000
       end
     end
     object tabEncode: TTabItem
@@ -284,7 +284,7 @@ object MainForm: TMainForm
         Margins.Left = 10.000000000000000000
         Margins.Right = 10.000000000000000000
         Size.Width = 464.000000000000000000
-        Size.Height = 35.000000000000000000
+        Size.Height = 30.000000000000000000
         Size.PlatformDefault = False
         StyledSettings = [Size, Style, FontColor]
         OnChangeTracking = EditsChangeTracking
@@ -297,11 +297,11 @@ object MainForm: TMainForm
         TextSettings.Font.Family = 'Consolas'
         TextSettings.HorzAlign = Center
         Position.X = 10.000000000000000000
-        Position.Y = 103.000000000000000000
+        Position.Y = 98.000000000000000000
         Margins.Left = 10.000000000000000000
         Margins.Right = 10.000000000000000000
         Size.Width = 464.000000000000000000
-        Size.Height = 35.000000000000000000
+        Size.Height = 30.000000000000000000
         Size.PlatformDefault = False
         StyledSettings = [Size, Style, FontColor]
       end
@@ -312,7 +312,7 @@ object MainForm: TMainForm
         Margins.Right = 10.000000000000000000
         Margins.Bottom = 5.000000000000000000
         Position.X = 10.000000000000000000
-        Position.Y = 79.000000000000000000
+        Position.Y = 74.000000000000000000
         Size.Width = 464.000000000000000000
         Size.Height = 19.000000000000000000
         Size.PlatformDefault = False
@@ -365,7 +365,7 @@ object MainForm: TMainForm
         Margins.Left = 10.000000000000000000
         Margins.Right = 10.000000000000000000
         Size.Width = 464.000000000000000000
-        Size.Height = 35.000000000000000000
+        Size.Height = 30.000000000000000000
         Size.PlatformDefault = False
         StyledSettings = [Size, Style, FontColor]
         OnChangeTracking = EditsChangeTracking
@@ -377,7 +377,7 @@ object MainForm: TMainForm
         Margins.Right = 10.000000000000000000
         Margins.Bottom = 5.000000000000000000
         Position.X = 10.000000000000000000
-        Position.Y = 79.000000000000000000
+        Position.Y = 74.000000000000000000
         Size.Width = 464.000000000000000000
         Size.Height = 19.000000000000000000
         Size.PlatformDefault = False
@@ -395,11 +395,11 @@ object MainForm: TMainForm
         TextSettings.Font.Family = 'Consolas'
         TextSettings.HorzAlign = Center
         Position.X = 10.000000000000000000
-        Position.Y = 103.000000000000000000
+        Position.Y = 98.000000000000000000
         Margins.Left = 10.000000000000000000
         Margins.Right = 10.000000000000000000
         Size.Width = 464.000000000000000000
-        Size.Height = 35.000000000000000000
+        Size.Height = 30.000000000000000000
         Size.PlatformDefault = False
         StyledSettings = [Size, Style, FontColor]
       end

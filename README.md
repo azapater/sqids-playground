@@ -2,7 +2,7 @@
 
 [![Sqids Screen Shot][product-screenshot]][sqids-url]
 
-[Sqids](https://sqids.org/javascript) (_pronounced "squids"_) is a small library that lets you **generate unique IDs from numbers**. It's good for link shortening, fast & URL-safe ID generation and decoding back into numbers for quicker database lookups.
+[Sqids](https://sqids.org) (_pronounced "squids"_) is a small library that lets you **generate unique IDs from numbers**. It's good for link shortening, fast & URL-safe ID generation and decoding back into numbers for quicker database lookups.
 
 Features:
 
